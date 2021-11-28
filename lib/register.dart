@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_catalog/myroutes.dart';
 
 import 'authservice.dart';
+import 'myroutes.dart';
 
 
-class Login extends StatefulWidget {
-  @override
-  _LoginPageState createState() => _LoginPageState();
+class Register extends StatefulWidget {
+
+   @override
+  _RegisterPageState createState() => _RegisterPageState();
+
 }
 
-class  _LoginPageState extends State<Login> {
+class _RegisterPageState extends State<Register>{
   String email = "";
   String password = "";
   bool changeButton = false;
@@ -17,39 +19,31 @@ class  _LoginPageState extends State<Login> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
 
+
   moveToHome(BuildContext context) async {
-      if(_formKey.currentState.validate()){
+    if(_formKey.currentState.validate()){
+      setState(() {
+        changeButton = true;
+      });
+      dynamic result = await _auth.registerWithEmailAndPassword(email, password);
+      if(result == null) {
         setState(() {
-          changeButton = true;
+          error = 'Please supply a valid email';
         });
-        dynamic result = await _auth.signInWithEmailAndPassword(email, password);
-        print("result  $result");
-        if(result != null) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text("successful sign In "),
-          ));
-          await Future.delayed(Duration(seconds: 1));
-          await Navigator.pushNamed(context, MyRoutes.homePage);
-
-          setState(() {
-            changeButton = false;
-          });
-
-        }else
-          {
-
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              content: Text("incorrect password"),
-            ));
-          }
-
-
       }
-  }
+      await Future.delayed(Duration(seconds: 1));
+      await Navigator.pushNamed(context, MyRoutes.loginPage);
+      setState(() {
+        changeButton = false;
+      });
+    }
 
+
+  }
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Material(
 
       child: Form(
@@ -57,7 +51,7 @@ class  _LoginPageState extends State<Login> {
         child: Column(
           children: [
             Image.asset(
-              "assets/images/login_scrn.png",
+              "assets/images/login.png",
               height: 250,
               width: 400,
               fit: BoxFit.cover,
@@ -134,7 +128,7 @@ class  _LoginPageState extends State<Login> {
                           color: Colors.white,
                         )
                             : Text(
-                          "Login",
+                          "Register",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -152,4 +146,9 @@ class  _LoginPageState extends State<Login> {
       ),
     );
   }
+
+
 }
+
+
+

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/subexercise.dart';
 
 import 'package:velocity_x/velocity_x.dart';
 
@@ -6,13 +7,18 @@ import 'catalog.dart';
 import 'itemwidget.dart';
 
 class HomeDetailPage extends StatelessWidget {
-  final Item catalog;
+   final List<SubExercise> catalog;
+   final num subExId;
+   // final List<SubExercise> smallExercise;
 
-  const HomeDetailPage({Key key, @required this.catalog})
+  const HomeDetailPage({Key key, @required this.catalog,@required this.subExId})
       : assert(catalog != null),
         super(key: key);
   @override
   Widget build(BuildContext context) {
+
+
+
     return Scaffold(
       appBar: AppBar(title:Text('Details Page')),
       backgroundColor: Colors.black12,
@@ -22,8 +28,7 @@ class HomeDetailPage extends StatelessWidget {
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
           children: [
-
-            "\$${catalog.price}".text.bold.xl4.red800.make(),
+            " demo ".text.bold.xl4.red800.make(),
             ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
@@ -41,11 +46,11 @@ class HomeDetailPage extends StatelessWidget {
      body: Padding(
        padding: const EdgeInsets.all(16.0),
        //all excercises of the select theme will be shown
-       child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+       child: (this.catalog != null && this.catalog.length!=0)
            ? ListView.builder(
-         itemCount: CatalogModel.items.length,
+         itemCount: this.catalog.length,
          itemBuilder: (context, index) => ItemWidget(
-           item: CatalogModel.items[index],
+           item:catalog[index] ,
          ),
        )
            : Center(

@@ -1,24 +1,32 @@
 import 'dart:convert';
 
+import 'package:flutter_catalog/subexercise.dart';
+
 class CatalogModel {
   static List<Item> items;
+
 }
 
 class Item {
-  final int id;
-  final String name;
-  final String desc;
-  final num price;
-  final String color;
-  final String image;
+  int id;
+   String name;
+   String desc;
+  num time;
+   String color;
+   String image;
+   List<SubExercise> subexercise;
+
+void setSubExercises(List<SubExercise> s){
+  this.subexercise =s;
+}
 
   Item({
     this.id,
     this.name,
     this.desc,
-    this.price,
+    this.time,
     this.color,
-    this.image,
+    this.image, this.subexercise,
   });
 
   Map<String, dynamic> toMap() {
@@ -26,9 +34,10 @@ class Item {
       'id': this.id,
       'name': this.name,
       'desc': this.desc,
-      'price': this.price,
+      'time': this.time,
       'color': this.color,
       'image': this.image,
+      'subexercise':this.subexercise
     };
   }
 
@@ -37,9 +46,10 @@ class Item {
       id: map['id'] as int,
       name: map['name'] as String,
       desc: map['desc'] as String,
-      price: map['price'] as num,
+      time: map['time'] as num,
       color: map['color'] as String,
       image: map['image'] as String,
+      subexercise:map['subexercise'] as List<SubExercise>,
     );
   }
 }
