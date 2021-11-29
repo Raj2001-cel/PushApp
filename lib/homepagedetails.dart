@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/subexercise.dart';
+import 'package:flutter_catalog/timerPage.dart';
 
 import 'package:velocity_x/velocity_x.dart';
 
@@ -20,17 +21,25 @@ class HomeDetailPage extends StatelessWidget {
 
 
     return Scaffold(
-      appBar: AppBar(title:Text('Details Page')),
-      backgroundColor: Colors.black12,
+      // appBar: AppBar(title:Text(CatalogModel.items[subExId-1].name)),
+      backgroundColor: Colors.white,
+   appBar: AppBar(
+      title: Text(CatalogModel.items[subExId-1].name,style: TextStyle(color: Color(0xff4d0ee2)),),
+    backgroundColor: Colors.white,
+    iconTheme: IconThemeData(color:Color(0xff4d0ee2)),
+    elevation: 0,
+    ),
+
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: Colors.black12.withOpacity(0.3),
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
           children: [
-            " demo ".text.bold.xl4.red800.make(),
+            " Timer ".text.bold.xl4.white.make(),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () => new TimerPage()
+              ,
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
                     Colors.deepPurpleAccent,
@@ -38,7 +47,7 @@ class HomeDetailPage extends StatelessWidget {
                   shape: MaterialStateProperty.all(
                     StadiumBorder(),
                   )),
-              child: "Buy".text.make(),
+              child: "Start".text.make(),
             ).wh(100, 50)
           ],
         ).p32(),
