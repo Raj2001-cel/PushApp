@@ -13,7 +13,7 @@
       "id": 2,
       "name": "Pull ",
       "desc": "Exercises consists of pull events",
-      "time": 699,
+      "time": 90,
       "color": "#00ac51",
       "image": "https://st3.depositphotos.com/3687485/13855/v/1600/depositphotos_138559424-stock-illustration-man-doing-physical-exercises-pulling.jpg"
 
@@ -23,7 +23,7 @@
       "id": 3,
       "name": "Legs",
       "desc": "legs body part workout",
-      "time": 1099,
+      "time": 76,
       "color": "#e0bfae",
       "image":"https://cdn4.vectorstock.com/i/1000x1000/01/08/sporty-woman-doing-squat-exercises-with-fitness-vector-24640108.jpg"},
 
@@ -31,159 +31,47 @@
       "id": 4,
       "name": "Chest ",
       "desc": "Exercises focusing on chest body parts",
-      "time": 500,
+      "time": 47,
       "color": "#544ee4",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRczmjFabiLpJo9ULDcC-q7yKhgQUxlWmx-7g&usqp=CAU" ,
-      "subexercises": [
-        {
-          "id": 1,
-          "name": "",
-          "time": 9,
-          "image":""
-        },{ "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" }
-    ]
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRczmjFabiLpJo9ULDcC-q7yKhgQUxlWmx-7g&usqp=CAU"
+
     },
     {
       "id": 5,
       "name": "Shoulder",
       "desc": "Exercises focuses on shoulder portion",
-      "time": 200,
+      "time": 62,
       "color": "#e3e4e9",
-      "image": "https://cdn4.vectorstock.com/i/1000x1000/45/93/dumbbell-shoulder-press-workout-exercise-vector-37014593.jpg",
-      "subexercises": [
-        {
-          "id": 1,
-          "name": "",
-          "time": 9,
-          "image":""
-        },{ "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" }
-      ]
+      "image": "https://cdn4.vectorstock.com/i/1000x1000/45/93/dumbbell-shoulder-press-workout-exercise-vector-37014593.jpg"
+
     },
     {
       "id": 6,
       "name": "Back ",
       "desc": "Exercises focus on back muscules",
-      "time": 799,
+      "time": 54,
       "color": "#f73984",
       "image": "https://cdn2.vectorstock.com/i/1000x1000/38/91/man-doing-heavy-weight-exercise-for-back-vector-17283891.jpg"
-,
-      "subexercises": [
-        {
-          "id": 1,
-          "name": "",
-          "time": 9,
-          "image":""
-        },{ "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" }
-      ]
+
+
     },
     {
       "id": 7,
       "name": "Abs & Sides",
       "desc": "focuses on Abs and sides ",
-      "time": 1299,
+      "time": 57,
       "color": "#1c1c1c",
       "image": "https://media.istockphoto.com/vectors/woman-doing-abdominal-workout-with-vups-exercise-vector-id962216674?b=1&k=20&m=962216674&s=612x612&w=0&h=UhekVvreDW8HslqnUDbacqDnyUAYigWn6YxSBkoBlGU="
-      ,
-      "subexercises": [
-        {
-          "id": 1,
-          "name": "",
-          "time": 9,
-          "image":""
-        },{ "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" }
-      ]
+
     },
     {
       "id": 8,
       "name": "Biceps & Triceps",
       "desc": "Focuses on arms muscles",
-      "time": 899,
+      "time": 91,
       "color": "#7c95eb",
       "image": "https://previews.123rf.com/images/torkk/torkk1608/torkk160800103/62620683-strong-man-doing-exercise-for-biceps-vector.jpg"
-      ,
-      "subexercises": [
-        {
-          "id": 1,
-          "name": "",
-          "time": 9,
-          "image":""
-        },{ "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" },
-        { "id": 1,
-          "name": "",
-          "time": 9,
-          "image":"" }
-      ]
+
     }
   ]
 }

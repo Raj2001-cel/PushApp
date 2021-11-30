@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/myroutes.dart';
 import 'package:flutter_catalog/register.dart';
+import 'package:flutter_catalog/timerPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
@@ -31,9 +32,10 @@ class MyApp extends StatelessWidget {
         MyRoutes.loginPage:(context)=>Login(),
         MyRoutes.homePage:(context)=>HomePage(),
         MyRoutes.registerPage:(context)=>Register()
+
       },
 
     );
-
   }
+
 }
