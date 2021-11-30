@@ -6,16 +6,33 @@ import 'package:velocity_x/velocity_x.dart';
 
 import 'catalog.dart';
 import 'itemwidget.dart';
+class HomeDetailPage extends StatefulWidget {
+  final List<SubExercise> catalog;
+  final num subExId;
+  final num totalTime;
 
-class HomeDetailPage extends StatelessWidget {
+  const HomeDetailPage({Key key, this.catalog, this.subExId,this.totalTime}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return  DetailPage(catalog: catalog, subExId: subExId,totalTime: totalTime);
+  }
+
+
+}
+
+class DetailPage extends State<HomeDetailPage> {
    final List<SubExercise> catalog;
    final num subExId;
+   bool isTimerOn = false;
+   num totalTime;
    // final List<SubExercise> smallExercise;
 
-  const HomeDetailPage({Key key, @required this.catalog,@required this.subExId})
-      : assert(catalog != null),
-        super(key: key);
-  @override
+   DetailPage({Key key, @required this.catalog,@required this.subExId,this.totalTime})
+      : assert(catalog != null);
+
+          @override
   Widget build(BuildContext context) {
 
 
@@ -33,22 +50,24 @@ class HomeDetailPage extends StatelessWidget {
       bottomNavigationBar: Container(
         color: Colors.black12.withOpacity(0.3),
         child: ButtonBar(
-          alignment: MainAxisAlignment.spaceBetween,
+          alignment: MainAxisAlignment.center,
           buttonPadding: EdgeInsets.zero,
           children: [
-            " Timer ".text.bold.xl4.white.make(),
-            ElevatedButton(
-              onPressed: () => new TimerPage()
-              ,
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(
-                    Colors.deepPurpleAccent,
-                  ),
-                  shape: MaterialStateProperty.all(
-                    StadiumBorder(),
-                  )),
-              child: "Start".text.make(),
-            ).wh(100, 50)
+        ElevatedButton(
+
+        onPressed: () => {
+
+      }
+        ,
+        style: ButtonStyle(
+
+
+            shape: MaterialStateProperty.all(
+              StadiumBorder(),
+            )),
+        child: FlutterStopWatch(totalTime),
+      ).wh(180, 100)
+
           ],
         ).p32(),
       ),
@@ -59,7 +78,7 @@ class HomeDetailPage extends StatelessWidget {
            ? ListView.builder(
          itemCount: this.catalog.length,
          itemBuilder: (context, index) => ItemWidget(
-           item:catalog[index] ,
+           item:catalog[index],
          ),
        )
            : Center(

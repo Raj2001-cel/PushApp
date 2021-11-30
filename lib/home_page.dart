@@ -118,6 +118,7 @@ class _HomePageState extends State<HomePage> {
   }
 
 void move(int id, Item item) {
+    num totalTime = item.time;
   int subExId = item.id;
   List<SubExercise> output = [];
   ExerciseCatalog.subexercise.forEach((element) {
@@ -125,7 +126,7 @@ void move(int id, Item item) {
       output.add(element);
     }
   });
-  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeDetailPage( catalog: output,subExId: subExId )));
+  Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeDetailPage( catalog: output,subExId: subExId,totalTime:totalTime*60 )));
 
 }
 
